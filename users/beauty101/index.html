@@ -3,191 +3,245 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>헤어앤뷰티 - 미용실/헤어샵</title>
+<title>헤어앤뷰티 - 세련된 미용실</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
   * {
     box-sizing: border-box;
   }
   body {
-    margin:0;
+    margin: 0; padding: 0;
     font-family: 'Noto Sans KR', sans-serif;
-    background: #fafafa;
+    background: #fff;
     color: #222;
-    line-height: 1.6;
+    line-height: 1.5;
   }
   header {
-    background: linear-gradient(135deg, #8e2de2, #4a00e0);
-    color: #fff;
-    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #633db5, #8e59d9);
+    color: white;
+    padding: 1.5em 1em;
     text-align: center;
   }
   header h1 {
-    margin: 0 0 .3rem;
+    margin: 0;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     letter-spacing: 2px;
   }
   header p {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 500;
+    margin: 0.3em 0 0;
+    font-weight: 400;
+    font-size: 1rem;
     opacity: 0.85;
   }
-  main {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 0 1rem 3rem;
+
+  nav {
+    background: #f3f3f8;
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
   }
-  section {
-    margin-bottom: 3rem;
-  }
-  h2 {
-    border-bottom: 3px solid #4a00e0;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-    color: #4a00e0;
+  nav button {
+    background: #8e59d9;
+    border: none;
+    color: white;
+    padding: 0.6em 1.3em;
+    border-radius: 30px;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
   }
-  /* 메뉴(서비스) 목록 */
-  .menu-list {
+  nav button:hover,
+  nav button:focus {
+    background: #633db5;
+    outline: none;
+  }
+
+  main {
+    max-width: 1024px;
+    margin: 2em auto;
+    padding: 0 1em;
+  }
+
+  section {
+    margin-bottom: 3em;
+  }
+
+  /* 메뉴 강조 */
+  #menu-list {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap: 1rem;
+    gap: 1.5em;
   }
   .menu-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgb(74 0 224 / 0.15);
-    padding: 1.2rem 1.5rem;
+    background: #f9f9fc;
+    border: 1px solid #ddd7f6;
+    border-radius: 12px;
+    padding: 1.5em 1.2em;
+    box-shadow: 0 4px 8px rgb(142 89 217 / 0.15);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
   }
   .menu-item:hover {
     transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgb(142 89 217 / 0.3);
   }
-  .menu-name {
-    font-size: 1.3rem;
+  .menu-item h3 {
+    margin-bottom: 0.6em;
+    color: #633db5;
     font-weight: 700;
-    color: #4a00e0;
-    margin-bottom: 0.4rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.03em;
   }
   .menu-price {
-    font-size: 1.1rem;
-    color: #666;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #444;
   }
-  /* 타겟 고객 */
-  .targets-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
+
+  /* 서비스 및 후기 강조 */
+  #selling-points {
+    background: linear-gradient(135deg, #8e59d9, #633db5);
+    color: white;
+    border-radius: 16px;
+    padding: 2em 1.5em;
+    box-shadow: 0 8px 20px rgb(99 61 181 / 0.4);
   }
-  .target {
-    background: #4a00e0;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    user-select: none;
+  #selling-points h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1em;
+    text-align: center;
+    letter-spacing: 1.5px;
   }
-  /* 강점 */
-  .selling-points-list {
+  #selling-points ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 360px;
   }
-  .selling-points-list li {
-    position: relative;
-    padding-left: 1.6rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+  #selling-points ul li {
+    margin: 0.8em 0;
     font-size: 1.1rem;
-    color: #333;
+    padding-left: 1.6em;
+    position: relative;
+    font-weight: 500;
   }
-  .selling-points-list li::before {
+  #selling-points ul li::before {
     content: "✔";
     position: absolute;
     left: 0;
-    top: 0;
-    color: #4a00e0;
-    font-weight: 900;
+    color: #ffdd57;
+    font-weight: 700;
+    font-size: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  /* 후기 강조 영역 (샘플 후기 추가) */
-  .reviews {
-    background: #4a00e0;
-    color: #fff;
+
+  /* 후기 섹션 */
+  #reviews {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  #reviews h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #633db5;
+    margin-bottom: 1em;
+    letter-spacing: 1.2px;
+  }
+  .review {
+    background: #f9f9fc;
     border-radius: 12px;
-    padding: 1.8rem 2rem;
-  }
-  .review-item {
-    margin-bottom: 1.5rem;
+    padding: 1.2em 1.5em;
+    margin-bottom: 1.2em;
+    box-shadow: 0 2px 8px rgb(142 89 217 / 0.1);
     font-style: italic;
-    font-size: 1rem;
-    line-height: 1.4;
+    color: #444;
   }
-  .review-item:last-child {
-    margin-bottom: 0;
-  }
-  .reviewer {
-    margin-top: 0.5rem;
-    font-weight: 700;
-    font-style: normal;
-    text-align: right;
-    font-size: 0.9rem;
-    opacity: 0.9;
-  }
-  /* 이벤트 배너 */
-  .event-banner {
-    background: linear-gradient(135deg, #f39c12, #d35400);
-    color: #fff;
-    text-align: center;
-    border-radius: 12px;
-    padding: 1.4rem 1rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-    box-shadow: 0 4px 12px rgb(211 84 0 / 0.4);
-    user-select: none;
-  }
-  /* 버튼 스타일 */
-  button.call-to-action {
+  .review strong {
     display: block;
-    margin: 2rem auto 0;
-    background: #4a00e0;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    padding: 0.9rem 2.5rem;
-    font-size: 1.2rem;
     font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 6px 12px rgb(74 0 224 / 0.4);
-    transition: background-color 0.3s ease;
+    margin-bottom: 0.3em;
+    color: #633db5;
   }
-  button.call-to-action:hover,
-  button.call-to-action:focus {
-    background: #6a00ff;
-    outline: none;
-  }
-  footer {
+
+  /* 이벤트 배너 */
+  #event-banner {
+    background: #ffdd57;
+    border-radius: 14px;
+    padding: 1.5em 1.8em;
     text-align: center;
-    padding: 1rem 1rem 2rem;
-    font-size: 0.9rem;
-    color: #555;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #633db5;
+    box-shadow: 0 6px 12px rgb(255 221 87 / 0.5);
+    margin-bottom: 2em;
   }
+
+  /* 타겟 고객 강조 */
+  #targets {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #targets h2 {
+    font-weight: 700;
+    color: #633db5;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    letter-spacing: 1.2px;
+  }
+  #targets ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.4em;
+    flex-wrap: wrap;
+  }
+  #targets ul li {
+    background: #8e59d9;
+    color: white;
+    border-radius: 20px;
+    padding: 0.6em 1.2em;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 3px 8px rgb(142 89 217 / 0.3);
+  }
+
+  footer {
+    background: #f3f3f8;
+    text-align: center;
+    padding: 1em 1em;
+    font-size: 0.9rem;
+    color: #666;
+    letter-spacing: 0.03em;
+  }
+
   /* 반응형 */
   @media (max-width: 600px) {
     header h1 {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
-    main {
-      margin: 1rem auto;
+    nav button {
+      padding: 0.5em 1em;
+      font-size: 0.9rem;
     }
-    .menu-list {
+    #menu-list {
       grid-template-columns: 1fr;
     }
-    .targets-list {
-      justify-content: center;
+    #selling-points ul {
+      max-width: 100%;
+    }
+    #targets ul {
+      gap: 0.8em;
     }
   }
 </style>
@@ -195,74 +249,90 @@
 <body>
 <header>
   <h1>헤어앤뷰티</h1>
-  <p>역세권 프리미엄 미용실 - 세련되고 감각적인 스타일링</p>
+  <p>역세권 프리미엄 미용실 & 최신 헤어트렌드</p>
 </header>
+
+<nav role="navigation" aria-label="주요 메뉴">
+  <button type="button" id="btn-menus">메뉴 정보 보기</button>
+  <button type="button" id="btn-event">오픈 이벤트 확인</button>
+  <button type="button" id="btn-contact">예약 문의</button>
+</nav>
+
 <main>
-  <section aria-labelledby="services-title">
-    <h2 id="services-title">서비스 안내</h2>
-    <div class="menu-list">
+  <section id="event-banner" aria-live="polite" role="region" aria-label="현재 이벤트 안내">
+    🎉 <strong>오픈 이벤트!</strong> 첫 방문 고객 할인 혜택을 누리세요!
+  </section>
+
+  <section id="menu" aria-label="헤어앤뷰티 서비스 메뉴">
+    <h2 style="text-align:center; color:#633db5; font-weight:700; letter-spacing:1.5px; margin-bottom: 1em;">서비스 메뉴 & 가격</h2>
+    <div id="menu-list">
       <article class="menu-item" tabindex="0">
-        <div class="menu-name">여성 커트</div>
-        <div class="menu-price">20,000원</div>
+        <h3>여성 커트</h3>
+        <p class="menu-price">20,000원</p>
       </article>
       <article class="menu-item" tabindex="0">
-        <div class="menu-name">남성 커트</div>
-        <div class="menu-price">15,000원</div>
+        <h3>남성 커트</h3>
+        <p class="menu-price">15,000원</p>
       </article>
       <article class="menu-item" tabindex="0">
-        <div class="menu-name">펌</div>
-        <div class="menu-price">70,000원</div>
+        <h3>펌</h3>
+        <p class="menu-price">70,000원</p>
       </article>
       <article class="menu-item" tabindex="0">
-        <div class="menu-name">염색</div>
-        <div class="menu-price">80,000원</div>
+        <h3>염색</h3>
+        <p class="menu-price">80,000원</p>
       </article>
     </div>
   </section>
-  <section aria-labelledby="targets-title">
-    <h2 id="targets-title">주요 고객층</h2>
-    <div class="targets-list" role="list">
-      <div class="target" role="listitem">직장인</div>
-      <div class="target" role="listitem">관광객/여행객</div>
-      <div class="target" role="listitem">트렌드/유행 관심 고객</div>
-    </div>
-  </section>
-  <section aria-labelledby="selling-points-title">
-    <h2 id="selling-points-title">헤어앤뷰티만의 강점</h2>
-    <ul class="selling-points-list">
+
+  <section id="selling-points" aria-label="헤어앤뷰티의 강점">
+    <h2>헤어앤뷰티만의 특별한 강점</h2>
+    <ul>
       <li>프리미엄 제품 사용</li>
       <li>최신 헤어트렌드 반영</li>
       <li>경험 많은 디자이너</li>
     </ul>
   </section>
-  <section aria-labelledby="reviews-title">
-    <h2 id="reviews-title">고객 후기</h2>
-    <div class="reviews">
-      <blockquote class="review-item">
-        "최신 트렌드를 잘 반영해줘서 매번 만족해요. 디자이너분들도 정말 친절하시고 전문가 느낌이 강해요."
-        <div class="reviewer">- 직장인 김지현</div>
-      </blockquote>
-      <blockquote class="review-item">
-        "여행 중 방문했는데, 깔끔한 스타일링에 감탄했습니다. 역세권이라 찾기도 편하고 재방문 의사 100%!"
-        <div class="reviewer">- 관광객 박성민</div>
-      </blockquote>
-      <button class="call-to-action" type="button" aria-label="예약 문의 버튼">예약 문의하기</button>
-    </div>
+
+  <section id="targets" aria-label="주요 고객층">
+    <h2>주요 고객층</h2>
+    <ul>
+      <li>직장인</li>
+      <li>관광객/여행객</li>
+      <li>트렌드/유행 관심 고객</li>
+    </ul>
   </section>
-  <section aria-labelledby="event-title">
-    <h2 id="event-title">오픈 이벤트</h2>
-    <div class="event-banner">
-      첫 방문 고객 할인! 지금 예약하고 세련된 스타일을 경험하세요.
+
+  <section id="reviews" aria-label="고객 후기">
+    <h2>고객 후기</h2>
+    <div class="review" tabindex="0">
+      <strong>김민지 님</strong>
+      "최신 트렌드를 잘 반영해서 항상 만족합니다. 디자이너 선생님이 친절하세요!"
+    </div>
+    <div class="review" tabindex="0">
+      <strong>이준호 님</strong>
+      "역세권이라 접근성이 좋고, 프리미엄 제품을 사용해서 머릿결 손상 걱정 없어요."
+    </div>
+    <div class="review" tabindex="0">
+      <strong>박지현 님</strong>
+      "첫 방문 할인 이벤트 덕분에 좋은 가격에 고퀄리티 시술 받았습니다."
     </div>
   </section>
 </main>
+
 <footer>
-  <p>주소: 역세권, 서울특별시 | 전화: 02-123-4567</p>
+  &copy; 2024 헤어앤뷰티 | 역세권 | 서울시 중심부 | 문의: 02-123-4567
 </footer>
+
 <script>
-  const button = document.querySelector('.call-to-action');
-  button.addEventListener('click', () => {
-    alert('예약 문의 감사합니다. 곧 연락드리겠습니다!');
+  document.getElementById('btn-menus').addEventListener('click', function() {
+    alert('헤어앤뷰티의 서비스 메뉴 및 가격입니다:\n\n- 여성 커트: 20,000원\n- 남성 커트: 15,000원\n- 펌: 70,000원\n- 염색: 80,000원');
+  });
+  document.getElementById('btn-event').addEventListener('click', function() {
+    alert('🎉 오픈 이벤트 안내:\n첫 방문 고객님께 할인 혜택을 드립니다! 지금 예약하세요.');
+  });
+  document.getElementById('btn-contact').addEventListener('click', function() {
+    alert('예약 및 문의는 02-123-4567로 연락 주세요.');
   });
 </script>
 </body>
