@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>파닥파닥 - 패스트푸드점</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin:0;
+    font-family: 'Nanum Gothic', sans-serif;
+    background: #fff8f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  main {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .intro p {
+    font-size: 1.1rem;
+    margin-top: 0.4rem;
+    color: #555;
+  }
+
+  /* 메뉴 강조 섹션 */
+  section.menu {
+    background: #fff3e0;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 8px rgb(255 111 97 / 0.2);
+    margin-bottom: 2rem;
+  }
+  section.menu h2 {
+    color: #d84315;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+  }
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .menu-item {
+    background-color: #ffccbc;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    width: 140px;
+    box-shadow: 0 2px 6px rgb(216 67 21 / 0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+  }
+  .menu-item:hover, .menu-item:focus {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgb(216 67 21 / 0.5);
+  }
+  .menu-item-name {
+    font-weight: 700;
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+    color: #bf360c;
+  }
+  .menu-item-price {
+    font-size: 1rem;
+    color: #6d4c41;
+  }
+
+  /* 타겟 및 강점 강조 */
+  section.features {
+    background: #fff0e1;
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 8px rgb(255 143 0 / 0.2);
+    margin-bottom: 2rem;
+  }
+  section.features h2 {
+    color: #ef6c00;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .targets, .selling-points {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .chip {
+    background-color: #ffcc80;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    color: #bf360c;
+    user-select: none;
+  }
+
+  /* 이벤트 배너 */
+  section.event {
+    background-color: #ff7043;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.3rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    box-shadow: 0 4px 10px rgb(255 112 67 / 0.6);
+    margin-bottom: 2rem;
+  }
+
+  /* 위치 및 안내 */
+  section.location {
+    text-align: center;
+    font-size: 1rem;
+    color: #8d6e63;
+    margin-bottom: 3rem;
+  }
+
+  /* 주문 버튼 */
+  .btn-order {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 3rem auto;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgb(255 111 97 / 0.4);
+    transition: background-color 0.3s ease;
+  }
+  .btn-order:hover, .btn-order:focus {
+    background-color: #d84315;
+    outline: none;
+  }
+
+  /* 푸터 */
+  footer {
+    background: #ffe0b2;
+    text-align: center;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    color: #6d4c41;
+  }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    .menu-list {
+      justify-content: center;
+      gap: 1rem;
+    }
+    .menu-item {
+      width: 100%;
+      max-width: 280px;
+    }
+    section.features {
+      padding: 1rem 0.5rem;
+    }
+    .targets, .selling-points {
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .btn-order {
+      width: 90%;
+      font-size: 1.1rem;
+      padding: 0.9rem 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    파닥파닥 🍗 - 빠르고 푸짐한 패스트푸드 치킨
+  </header>
+  <main>
+    <section class="intro" aria-label="매장 소개">
+      <p>안녕하세요! <strong>파닥파닥</strong>입니다. 밝고 유쾌하며 가족같은 분위기에서 빠른 배달과 푸짐한 양으로 여러분의 야식을 책임집니다!</p>
+    </section>
+
+    <section class="menu" aria-labelledby="menu-title">
+      <h2 id="menu-title">메뉴 소개</h2>
+      <div class="menu-list">
+        <button class="menu-item" type="button" aria-describedby="price-fried">
+          <div class="menu-item-name">후라이드 치킨</div>
+          <div class="menu-item-price" id="price-fried">₩150,000</div>
+        </button>
+        <button class="menu-item" type="button" aria-describedby="price-seasoned">
+          <div class="menu-item-name">양념 치킨</div>
+          <div class="menu-item-price" id="price-seasoned">₩16,000</div>
+        </button>
+        <button class="menu-item" type="button" aria-describedby="price-soy">
+          <div class="menu-item-name">간장 치킨</div>
+          <div class="menu-item-price" id="price-soy">₩17,000</div>
+        </button>
+      </div>
+    </section>
+
+    <section class="features" aria-label="대상 고객 및 강점">
+      <h2>우리 고객분들</h2>
+      <div class="targets" aria-label="타겟 고객">
+        <span class="chip">학생</span>
+        <span class="chip">1인 고객</span>
+        <span class="chip">야식족</span>
+        <span class="chip">20~30대 직장인</span>
+      </div>
+      <h2>우리의 강점</h2>
+      <div class="selling-points" aria-label="판매 포인트">
+        <span class="chip">빠른 배달</span>
+        <span class="chip">푸짐한 양</span>
+        <span class="chip">가성비</span>
+      </div>
+    </section>
+
+    <section class="event" aria-live="polite" aria-atomic="true">
+      🎉 신규 고객 첫 주문 시 콜라 1.5L 서비스! 지금 바로 주문하세요!
+    </section>
+
+    <section class="location" aria-label="매장 위치 안내">
+      📍 서울시 강남구 역삼동
+    </section>
+
+    <button class="btn-order" type="button" aria-label="주문하기 버튼">지금 주문하기</button>
+  </main>
+  <footer>
+    © 2024 파닥파닥 - 모두가 함께 즐기는 치킨 타임!
+  </footer>
+<script>
+  // 메뉴 버튼 클릭 시 알림
+  document.querySelectorAll('.menu-item').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.querySelector('.menu-item-name').textContent;
+      const price = button.querySelector('.menu-item-price').textContent;
+      alert(`감사합니다! "${name}" 메뉴를 선택하셨습니다.\n가격: ${price}`);
+    });
+  });
+
+  // 주문하기 버튼 클릭 시 알림
+  document.querySelector('.btn-order').addEventListener('click', () => {
+    alert('주문이 접수되었습니다! 빠른 배달로 찾아뵙겠습니다 🐔🍗');
+  });
+</script>
+</body>
+</html>
