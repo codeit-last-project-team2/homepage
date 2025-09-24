@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>연남 스페셜티 카페 보틀 — 공식 홈페이지</title>
+<meta name="description" content="연남 스페셜티 카페 보틀: 아늑한 분위기에서 직접 로스팅한 스페셜티 커피를 즐겨보세요!">
+<style>
+:root{--bg:#0b0f14;--fg:#f6f7f9;--muted:#a8b3c1;--brand:#1fbf6b;--accent:#ffd166;--card:#101823;--line:#1d2633;--radius:16px;--maxw:1080px}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Pretendard,sans-serif;scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}.container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+header{position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);background:rgba(11,15,20,.7);backdrop-filter:saturate(150%) blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700}.dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--accent))}
+.menu{display:flex;gap:8px;flex-wrap:wrap}.menu a{padding:8px 10px;border-radius:10px;color:var(--muted)}.menu a:hover,.menu a.active{background:#141c29;color:var(--fg)}
+.cta{background:var(--brand);color:#081018;padding:8px 12px;border-radius:12px;font-weight:700}
+.hero{padding:72px 0 32px}.wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center}
+h1{font-size:40px;line-height:1.2;margin:10px 0}.lead{color:var(--muted);font-size:18px}
+.hero-card{min-height:200px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(135deg,#1a2333,#0f1724);display:grid;place-items:center}
+section{padding:56px 0;border-top:1px solid var(--line)}.section-title{font-size:28px;margin:0 0 8px}.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}.card .body{padding:14px}
+.emoji{font-size:42px;display:grid;place-items:center;height:120px;background:#0f1724;border-bottom:1px solid var(--line)}
+.price{color:var(--accent);font-weight:700}.list{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.list li{background:#0f1724;border:1px solid var(--line);padding:12px;border-radius:10px}
+.grid2{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
+@media(max-width:600px){h1{font-size:30px}.cards{grid-template-columns:1fr}}
+/* 추가적인 유쾌함을 위한 작은 애니메이션 */
+@keyframes pop {0%{transform:scale(1);} 60%{transform:scale(1.08);} 100%{transform:scale(1);}}
+.card:hover{animation:pop 0.13s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top"><span class="dot"></span><span>연남 스페셜티 카페 보틀</span></a>
+    <nav class="menu">
+      <a href="#highlights">특장점</a><a href="#menu">메뉴</a><a href="#promo">이벤트</a><a href="#location">오시는 길</a><a href="#contact" class="cta">문의</a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero container">
+  <div class="wrap">
+    <div>
+      <h1>아늑함 속에서 만나는<br>스페셜티 커피의 특별함</h1>
+      <p class="lead">아늑한 분위기에서 직접 로스팅한 스페셜티 커피와 디저트를 즐겨보세요!</p>
+      <p class="muted">영업시간: 10:00 ~ 22:00 (연중무휴)</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
+        <a class="cta" href="tel:010-1234-5678">전화하기</a>
+        <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="#menu">메뉴 보기</a>
+        <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="https://map.kakao.com/?q=서울+마포구+연남동+카페+보틀" target="_blank" rel="noopener">지도 열기</a>
+      </div>
+    </div>
+    <div class="hero-card" aria-hidden="true" style="text-align:center">
+      <div style="font-size:60px;filter:drop-shadow(0 0 10px #1fbf6b55);margin-bottom:8px">☕</div>
+      <div style="font-size:20px;font-weight:600;line-height:1.4;color:var(--accent)">연남 스페셜티<br>카페 보틀</div>
+      <div style="font-size:14px;color:var(--muted);margin-top:10px;">가족, 친구, 연인 모두를 위한 아늑한 공간</div>
+    </div>
+  </div>
+</section>
+
+<section id="highlights" class="container" aria-labelledby="hi-title">
+  <h2 id="hi-title" class="section-title">이런 점이 좋아요</h2>
+  <ul class="list">
+    <li><b>자체 로스팅 원두</b><br>매장에서 직접 로스팅한 신선한 커피 원두만 사용합니다.</li>
+    <li><b>디카페인 & 오트밀크 옵션</b><br>취향과 건강을 위한 다양한 옵션을 선택할 수 있어요.</li>
+    <li><b>콘센트 많은 좌석과 무료 와이파이</b><br>학생, 직장인, 장시간 머무르는 모든 고객님을 위한 편의 제공!</li>
+    <li><b>아늑하고 편안한 공간</b><br>가족, 학생, 연인 모두가 편하게 머물 수 있어요.</li>
+  </ul>
+</section>
+
+<section id="menu" class="container" aria-labelledby="menu-title">
+  <h2 id="menu-title" class="section-title">대표 메뉴</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="emoji" aria-label="아메리카노">☕️</div>
+      <div class="body">
+        <div style="font-size:18px;font-weight:600">아메리카노</div>
+        <div class="muted" style="margin:6px 0 12px">직접 로스팅한 원두의 깔끔함</div>
+        <div class="price">4,500원</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="emoji" aria-label="카페 라떼">🥛</div>
+      <div class="body">
+        <div style="font-size:18px;font-weight:600">카페 라떼</div>
+        <div class="muted" style="margin:6px 0 12px">부드럽고 고소한 라떼</div>
+        <div class="price">5,500원</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="emoji" aria-label="콜드브루">🧊</div>
+      <div class="body">
+        <div style="font-size:18px;font-weight:600">시그니처 콜드브루</div>
+        <div class="muted" style="margin:6px 0 12px">특별 레시피로 내린 진한 콜드브루</div>
+        <div class="price">6,000원</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="emoji" aria-label="바스크 치즈케이크">🍰</div>
+      <div class="body">
+        <div style="font-size:18px;font-weight:600">바스크 치즈케이크</div>
+        <div class="muted" style="margin:6px 0 12px">진한 치즈와 달콤한 풍미</div>
+        <div class="price">7,200원</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="promo" class="container" aria-labelledby="promo-title">
+  <h2 id="promo-title" class="section-title">이벤트</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="emoji" aria-label="이벤트">🎉</div>
+      <div class="body">
+        <div style="font-size:18px;font-weight:600">오픈 1주일 기념</div>
+        <div class="muted" style="margin:6px 0 12px">아메리카노 1+1 이벤트 진행 중!<br>
+          (기간: 오픈 후 1주일간)</div>
+        <div style="color:var(--accent);font-weight:700;">놓치지 마세요!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="location" class="container" aria-labelledby="loc-title">
+  <h2 id="loc-title" class="section-title">오시는 길</h2>
+  <div class="grid2">
+    <ul class="list">
+      <li><b>주소</b><br><span class="muted">서울 마포구 연남동</span></li>
+      <li><b>전화</b><br><a href="tel:010-1234-5678">010-1234-5678</a></li>
+      <li><b>영업시간</b><br><span class="muted">10:00 ~ 22:00 (연중무휴)</span></li>
+    </ul>
+    <div>
+      <!-- 카카오맵 임베드 예시 -->
+      <iframe title="연남 스페셜티 카페 보틀 위치" width="100%" height="240" frameborder="0" style="border-radius:14px;border:1px solid var(--line)" src="https://map.kakao.com/embed/maplink/18942542"></iframe>
+      <div class="muted" style="font-size:12px;margin-top:6px;">* 지도 위치는 실제와 다를 수 있습니다.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="container" aria-labelledby="contact-title">
+  <h2 id="contact-title" class="section-title">문의 · 예약</h2>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <a class="cta" href="tel:010-1234-5678">지금 전화</a>
+    <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="#menu">메뉴 보기</a>
+  </div>
+  <div style="margin-top:24px;color:var(--muted);font-size:15px;">
+    가족, 친구, 연인 누구와도 편하게 방문하실 수 있습니다.<br>
+    자리 예약 및 단체 문의는 전화로 부탁드려요!
+  </div>
+</section>
+
+<footer><div class="container">© 2024 연남 스페셜티 카페 보틀. All rights reserved.</div></footer>
+<script>
+// 메뉴 섹션 자동 스크롤, 메뉴 active 처리 (접근성 개선)
+document.querySelectorAll('.menu a').forEach(function(el){
+  el.addEventListener('click',function(){
+    document.querySelectorAll('.menu a').forEach(e=>e.classList.remove('active'));
+    el.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
