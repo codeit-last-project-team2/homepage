@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>파닥파닥 - 아늑한 치킨집</title>
+<style>
+  :root {
+    --primary-color: #e94e1b;
+    --secondary-color: #f7f3f0;
+    --accent-color: #ff6f3c;
+    --text-color: #3a3a3a;
+    --font-family: 'Noto Sans KR', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgb(233 78 27 / 0.3);
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2.2rem;
+    letter-spacing: 0.1em;
+  }
+  header p {
+    margin: 0.2rem 0 0;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  .intro {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.05);
+    text-align: center;
+  }
+  .intro h2 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+  }
+  .target-section {
+    margin-top: 1.5rem;
+  }
+  .target-section h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+  .target-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+  }
+  .target-list li {
+    background: var(--accent-color);
+    color: white;
+    border-radius: 20px;
+    padding: 0.4rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  .menu-section {
+    margin-top: 3rem;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem 2rem 2.5rem;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.07);
+  }
+  .menu-section h3 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .menu-list li:last-child {
+    border-bottom: none;
+  }
+  .selling-points {
+    margin-top: 3rem;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 16px;
+    padding: 2rem 2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgb(233 78 27 / 0.4);
+  }
+  .selling-points h3 {
+    margin-top: 0;
+    font-weight: 900;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  .points-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .point-item {
+    flex: 1 1 180px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background: rgba(255 255 255 / 0.15);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    user-select: none;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 0.12);
+  }
+  .event-banner {
+    margin: 3rem auto 4rem;
+    max-width: 600px;
+    background: var(--accent-color);
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.4rem;
+    padding: 1.3rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 6px 15px rgb(255 111 60 / 0.6);
+    user-select: none;
+  }
+  .location {
+    margin-top: 3rem;
+    background: white;
+    border-radius: 16px;
+    padding: 2rem 2rem;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    text-align: center;
+  }
+  .location h3 {
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  .location p {
+    margin: 0.6rem 0 0;
+    font-size: 1.1rem;
+  }
+  .btn-order {
+    display: block;
+    max-width: 180px;
+    margin: 3rem auto 6rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 28px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 0.9rem 0;
+    letter-spacing: 0.05em;
+    box-shadow: 0 6px 12px rgb(233 78 27 / 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  .btn-order:hover,
+  .btn-order:focus {
+    background-color: #dd3e14;
+    outline: none;
+  }
+  footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  @media (max-width: 600px) {
+    .points-list {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .point-item {
+      font-size: 1.1rem;
+      padding: 0.8rem 1rem;
+    }
+    .menu-list li {
+      font-size: 1rem;
+      padding: 0.6rem 0.8rem;
+    }
+    .btn-order {
+      max-width: 100%;
+      font-size: 1.1rem;
+      padding: 0.85rem 0;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>파닥파닥</h1>
+  <p>아늑하고 편안한 치킨집</p>
+</header>
+<main>
+  <section class="intro" aria-label="파닥파닥 소개">
+    <h2>빠르고 푸짐한 치킨의 맛, 파닥파닥</h2>
+    <p>주거 단지 중심에서 가족, 직장인, 학생, 야식족 모두를 위한 신선한 치킨을 쉽고 빠르게 배달합니다.</p>
+  </section>
+
+  <section class="target-section" aria-label="타겟층">
+    <h3>타겟 고객</h3>
+    <ul class="target-list">
+      <li>가족 단위</li>
+      <li>직장인</li>
+      <li>학생</li>
+      <li>야식족</li>
+    </ul>
+  </section>
+
+  <section class="menu-section" aria-label="메뉴 목록">
+    <h3>대표 메뉴</h3>
+    <ul class="menu-list">
+      <li><span>후라이드</span> <span>15,000원</span></li>
+      <li><span>양념</span> <span>17,000원</span></li>
+    </ul>
+  </section>
+
+  <section class="selling-points" aria-label="주요 판매 포인트">
+    <h3>주요 판매 포인트</h3>
+    <div class="points-list">
+      <div class="point-item" tabindex="0" aria-label="빠른 배달">빠른 배달</div>
+      <div class="point-item" tabindex="0" aria-label="푸짐한 양">푸짐한 양</div>
+    </div>
+  </section>
+
+  <div class="event-banner" role="region" aria-live="polite">
+    첫 주문 콜라 서비스! 지금 바로 주문하세요!
+  </div>
+
+  <button class="btn-order" type="button" aria-label="주문하기 버튼">주문하기</button>
+
+  <section class="location" aria-label="매장 위치">
+    <h3>매장 위치</h3>
+    <p>주거 단지 중심, 쉽게 찾아오실 수 있습니다.</p>
+  </section>
+</main>
+<footer>
+  © 2024 파닥파닥 - 아늑하고 편안한 치킨집
+</footer>
+<script>
+  document.querySelector('.btn-order').addEventListener('click', () => {
+    alert('주문해주셔서 감사합니다! 첫 주문 콜라 서비스를 받아가세요!');
+  });
+</script>
+</body>
+</html>
