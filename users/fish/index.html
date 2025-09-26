@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>마산 1호 횟집</title>
+<style>
+  :root {
+    --primary-color: #00796b;
+    --accent-color: #ff7043;
+    --bg-color: #f9fcfa;
+    --text-color: #333;
+    --font-family: 'Noto Sans KR', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1.5px;
+  }
+  .highlight {
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+  main {
+    max-width: 900px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+  section {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  /* 메뉴 강조 섹션 */
+  .menu-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .menu-item {
+    background: white;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 150px;
+    max-width: 48%;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+  .menu-item:hover {
+    transform: scale(1.05);
+  }
+  .menu-item h3 {
+    margin: 0 0 .5rem 0;
+    font-size: 1.3rem;
+  }
+  .menu-item p {
+    margin: 0;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+
+  /* 주요 판매 포인트 */
+  .selling-points {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  }
+  .selling-points ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  .selling-points li {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    position: relative;
+    padding-left: 1.2rem;
+  }
+  .selling-points li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  /* 타겟층 */
+  .target-list {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 0.08);
+  }
+  .target-list ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+  }
+  .target-list li {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: .4rem .8rem;
+    border-radius: 16px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  /* 신규 고객 유치 버튼 */
+  .btn-new-customer {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 2rem auto 3rem auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgb(255 112 67 / 0.5);
+    transition: background-color 0.3s ease;
+  }
+  .btn-new-customer:hover,
+  .btn-new-customer:focus {
+    background-color: #e85b3a;
+  }
+
+  /* 반응형 */
+  @media (max-width: 600px) {
+    .menu-item {
+      max-width: 100%;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    .btn-new-customer {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>마산 1호 횟집</h1>
+</header>
+<main>
+  <section aria-labelledby="menu-title">
+    <h2 id="menu-title">메뉴</h2>
+    <div class="menu-list">
+      <article class="menu-item" tabindex="0" role="button" aria-pressed="false" onclick="menuAlert('1', 1111)" onkeypress="if(event.key==='Enter'){menuAlert('1', 1111);}">
+        <h3>1</h3>
+        <p>₩ 1,111</p>
+      </article>
+      <article class="menu-item" tabindex="0" role="button" aria-pressed="false" onclick="menuAlert('2', 2222)" onkeypress="if(event.key==='Enter'){menuAlert('2', 2222);}">
+        <h3>2</h3>
+        <p>₩ 2,222</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="selling-points-title">
+    <h2 id="selling-points-title">주요 판매 포인트</h2>
+    <div class="selling-points">
+      <ul>
+        <li>건강한 재료</li>
+        <li>푸짐한 양</li>
+        <li>지역 특산물 활용</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="target-title">
+    <h2 id="target-title">주요 타겟층</h2>
+    <div class="target-list">
+      <ul>
+        <li>가족 단위</li>
+        <li>직장인</li>
+        <li>인근 상권 종사자</li>
+        <li>지역 축제 방문객</li>
+      </ul>
+    </div>
+  </section>
+
+  <button class="btn-new-customer" type="button" onclick="newCustomerAlert()">신규 고객 유치 이벤트 참여하기</button>
+</main>
+<script>
+  function menuAlert(name, price) {
+    alert(`메뉴 "${name}"를 선택하셨습니다. 가격은 ${price.toLocaleString()}원 입니다.`);
+  }
+  function newCustomerAlert() {
+    alert('신규 고객 유치 이벤트에 관심 가져주셔서 감사합니다!\n자세한 내용은 매장에 문의해 주세요.');
+  }
+</script>
+</body>
+</html>
