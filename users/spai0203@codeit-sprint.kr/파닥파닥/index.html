@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>파닥파닥 — 공식 홈페이지</title>
-<meta name="description" content="파닥파닥: 지금 바로 바삭하고 푸짐한 치킨을 즐겨보세요!">
+<meta name="description" content="파닥파닥: 지금 바로 바삭한 치킨의 맛을 경험해보세요!">
 <style>
 :root{--bg:#0b0f14;--fg:#f6f7f9;--muted:#a8b3c1;--brand:#1fbf6b;--accent:#ffd166;--card:#101823;--line:#1d2633;--radius:16px;--maxw:1080px}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Pretendard,sans-serif;scroll-behavior:smooth}
@@ -26,16 +26,25 @@ section{padding:56px 0;border-top:1px solid var(--line)}.section-title{font-size
 footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 @media(max-width:900px){.wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
 @media(max-width:600px){h1{font-size:30px}.cards{grid-template-columns:1fr}}
-/* 추가: Hero 영역의 이모지 크기 */
-.hero-card h2{font-size:62px;margin:0}
 </style>
+<script>
+// 메뉴 이미지 로드 오류 시 대체이미지
+function setDefaultImg(img) {
+  img.onerror = null;
+  img.src = "https://dummyimage.com/400x300/222/fff.png&text=No+Image";
+}
+</script>
 </head>
 <body>
 <header>
   <div class="container nav">
     <a class="brand" href="#top"><span class="dot"></span><span>파닥파닥</span></a>
     <nav class="menu">
-      <a href="#highlights">특장점</a><a href="#menu">메뉴</a><a href="#promo">이벤트</a><a href="#location">오시는 길</a><a href="#contact" class="cta">문의</a>
+      <a href="#highlights">특장점</a>
+      <a href="#menu">메뉴</a>
+      <a href="#promo">이벤트</a>
+      <a href="#location">오시는 길</a>
+      <a href="#contact" class="cta">문의</a>
     </nav>
   </div>
 </header>
@@ -44,20 +53,17 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section class="hero container">
   <div class="wrap">
     <div>
-      <h1>파닥파닥, 바삭하게 즐기는 트렌디 치킨!</h1>
-      <p class="lead">지금 바로 바삭하고 푸짐한 치킨을 즐겨보세요!</p>
-      <p class="muted">매일 16:00 ~ 24:00</p>
+      <h1>바삭함이 살아있는<br>파닥파닥 치킨</h1>
+      <p class="lead">지금 바로 바삭한 치킨의 맛을 경험해보세요!</p>
+      <p class="muted">영업시간: 매일 16:00 ~ 24:00</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-        <a class="cta" href="tel:">전화하기</a>
+        <a class="cta" href="tel:031-000-0000">전화하기</a>
         <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="#menu">메뉴 보기</a>
-        <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="https://map.kakao.com/link/map/파닥파닥,37.5040449,127.0545799" target="_blank" rel="noopener">지도 열기</a>
+        <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="https://map.kakao.com/?q=경기도 용인시" target="_blank" rel="noopener">지도 열기</a>
       </div>
     </div>
     <div class="hero-card" aria-hidden="true">
-      <div style="text-align:center;">
-        <h2>🍗</h2>
-        <div style="font-size:20px;line-height:1.4;margin-top:-8px;">친근함과 유쾌함이 가득<br>트렌디 치킨집</div>
-      </div>
+      <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" alt="치킨 아이콘" style="width:100px;height:100px;display:block;filter:saturate(1.15)">
     </div>
   </div>
 </section>
@@ -65,48 +71,52 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section id="highlights" class="container" aria-labelledby="hi-title">
   <h2 id="hi-title" class="section-title">이런 점이 좋아요</h2>
   <ul class="list">
-    <li>🚀 빠른 배달로 치킨이 따뜻하게 도착해요</li>
-    <li>💸 저렴한 가격으로 부담 없이 즐기세요</li>
-    <li>🍗 푸짐한 양으로 배부르게 즐길 수 있어요</li>
-    <li>👨‍💼 직장인・학생 모두 환영해요</li>
-    <li>✨ 트렌디한 분위기에서 맛있는 치킨을!</li>
+    <li>바삭하게 튀겨진 치킨</li>
+    <li>깔끔한 기름 사용</li>
+    <li>용인 지역 치킨 전문점</li>
   </ul>
 </section>
 
 <section id="menu" class="container" aria-labelledby="menu-title">
   <h2 id="menu-title" class="section-title">대표 메뉴</h2>
   <div class="cards">
+
     <div class="card">
-      <div class="emoji">🍗</div>
+      <div class="emoji">
+        <img src="data/user_info/spai0203@codeit-sprint.kr/파닥파닥/menu_img/후라이드.jpg" alt="후라이드" style="width:80px;height:80px;object-fit:cover" onerror="setDefaultImg(this)">
+      </div>
       <div class="body">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <b>후라이드</b>
-          <span class="price">₩15,000</span>
+          <span class="price">15,000원</span>
         </div>
-        <div class="muted" style="margin-top:6px">바삭하고, 기름 깨끗해요</div>
+        <div style="margin:8px 0 0 0" class="muted">바삭해요~ 기름 깨끗해요</div>
       </div>
     </div>
+
     <div class="card">
-      <div class="emoji">🌶️</div>
+      <div class="emoji">
+        <img src="data/user_info/spai0203@codeit-sprint.kr/파닥파닥/menu_img/후라이드.jpg" alt="간장 치킨" style="width:80px;height:80px;object-fit:cover" onerror="setDefaultImg(this)">
+      </div>
       <div class="body">
         <div style="display:flex;justify-content:space-between;align-items:center">
-          <b>양념치킨</b>
-          <span class="price">₩16,000</span>
+          <b>간장 치킨</b>
+          <span class="price">16,000원</span>
         </div>
-        <div class="muted" style="margin-top:6px">달달해요</div>
+        <div style="margin:8px 0 0 0" class="muted">짭짤해요~</div>
       </div>
     </div>
+
   </div>
 </section>
 
 <section id="promo" class="container" aria-labelledby="promo-title">
   <h2 id="promo-title" class="section-title">이벤트</h2>
-  <div class="cards">
+  <div class="cards" style="color:var(--muted);text-align:center;align-items:center;justify-content:center;min-height:120px;">
     <div class="card">
-      <div class="emoji">🥤</div>
-      <div class="body">
-        <b>금요일, 토요일<br>음료 서비스!</b>
-        <div class="muted" style="margin-top:6px">금요일, 토요일 주문 시 음료를 함께 드려요</div>
+      <div class="emoji">🎉</div>
+      <div class="body" style="text-align:center">
+        현재 진행 중인 이벤트가 없습니다.
       </div>
     </div>
   </div>
@@ -116,15 +126,13 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
   <h2 id="loc-title" class="section-title">오시는 길</h2>
   <div class="grid2">
     <ul class="list">
-      <li><b>주소</b><br><span class="muted">서울특별시 강남구 테헤란로114길 11</span></li>
-      <li><b>전화</b><br><a href="tel:">-</a></li>
+      <li><b>주소</b><br><span class="muted">경기도 용인시</span></li>
+      <li><b>전화</b><br><a href="tel:031-000-0000">031-000-0000</a></li>
       <li><b>영업시간</b><br><span class="muted">매일 16:00 ~ 24:00</span></li>
     </ul>
     <div>
-      <!-- 지도: 카카오맵 예시 iframe -->
-      <iframe title="파닥파닥 위치" width="100%" height="220" frameborder="0" style="border-radius:12px;border:1px solid var(--line);"
-        src="https://map.kakao.com/link/map/파닥파닥,37.5040449,127.0545799">
-      </iframe>
+      <iframe title="파닥파닥 위치 지도" width="100%" height="220" style="border-radius:12px;border:0;min-width:200px"
+        src="https://map.kakao.com/?q=경기도 용인시" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
@@ -132,17 +140,14 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 <section id="contact" class="container" aria-labelledby="contact-title">
   <h2 id="contact-title" class="section-title">문의 · 예약</h2>
   <div style="display:flex;gap:10px;flex-wrap:wrap">
-    <a class="cta" href="tel:">지금 전화</a>
+    <a class="cta" href="tel:031-000-0000">지금 전화</a>
     <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="#menu">메뉴 보기</a>
-    <a style="border:1px solid var(--line);padding:8px 12px;border-radius:12px" href="mailto:spai0203@codeit-sprint.kr">이메일 문의</a>
+  </div>
+  <div style="margin-top:24px;color:var(--muted);font-size:15px">
+    이메일 문의: <a href="mailto:spai0203@codeit-sprint.kr">spai0203@codeit-sprint.kr</a>
   </div>
 </section>
 
 <footer><div class="container">© 2024 파닥파닥. All rights reserved.</div></footer>
-
-<script>
-// 메뉴, 특장점, 이벤트 등 추가 항목이 많아질 경우 동적구현 가능
-// 현재 정보 범위에서는 필요없으니 비워둡니다.
-</script>
 </body>
 </html>
