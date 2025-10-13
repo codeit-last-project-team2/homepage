@@ -1,366 +1,408 @@
 <!doctype html>
-<html lang="ko" data-theme="auto">
+<html lang="ko" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="가나다라 브랜드 소개: 작은 골목에서 시작해 정직·지속가능·지역상생의 가치를 지키는 카페 브랜드 스토리와 팀, 타임라인, FAQ.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1feb60">
 <meta name="format-detection" content="telephone=no,email=no,address=no">
-<meta property="og:title" content="가나다라 | 브랜드 스토리와 가치">
-<meta property="og:description" content="정직한 재료와 진정성 있는 과정으로 만드는 카페 브랜드, 가나다라의 이야기.">
+<title>리틀그린 | 식목일 기념 프로모션 및 행사</title>
+<meta name="description" content="티끌모아 태산처럼 많은 사람의 작은 노력이 모여 사계를 되찾길 바라는 마음으로 마련한 리틀그린 식목일 기념 행사 안내. 참여 대상, 기간, 혜택과 FAQ를 확인하세요.">
+<meta property="og:title" content="리틀그린 | 식목일 기념 프로모션 및 행사">
+<meta property="og:description" content="티끌모아 태산처럼 많은 사람의 작은 노력이 모여 사계를 되찾길 바라는 마음으로 마련한 리틀그린 식목일 기념 행사 안내. 참여 대상, 기간, 혜택과 FAQ를 확인하세요.">
 <meta property="og:type" content="website">
-<title>가나다라 | 브랜드 스토리와 가치</title>
 <style>
+/* Design tokens */
 :root{
-  /* color tokens */
-  --brand:#1f6feb;
-  --brand-2:#0ea5e9;
-  --accent:#f59e0b;
+  --brand:#1feb60;
+  --brand-2:#0ec5e9;
+  --accent:#f5eb0b;
   --bg:#ffffff;
-  --text:#111418;
-  --muted:#5b6770;
-  --line:rgba(17,20,24,0.12);
+  --fg:#121212;
+  --muted:#575757;
+  --line:rgba(0,0,0,0.12);
   --radius:12px;
-  --shadow:0 1px 2px rgba(0,0,0,0.06),0 8px 24px rgba(0,0,0,0.08);
-  /* type & spacing scale */
+  --shadow:0 8px 24px rgba(0,0,0,.08);
   --step--1:0.875rem;
   --step-0:1rem;
-  --step-1:1.125rem;
-  --step-2:1.375rem;
-  --step-3:1.75rem;
-  --step-4:2.25rem;
-  --step-5:3rem;
-  --space-1:0.5rem;
-  --space-2:0.75rem;
-  --space-3:1rem;
-  --space-4:1.5rem;
-  --space-5:2rem;
-  --space-6:3rem;
+  --step-1:1.25rem;
+  --step-2:1.5rem;
+  --step-3:2rem;
+  --step-4:2.5rem;
 }
 html[data-theme="dark"]{
-  --bg:#0b0f14;
-  --text:#e6edf3;
-  --muted:#9fb1bf;
+  --bg:#0b0d10;
+  --fg:#e8edf2;
+  --muted:#a8b0b7;
   --line:rgba(255,255,255,0.16);
-  --shadow:0 1px 2px rgba(0,0,0,0.5),0 8px 24px rgba(0,0,0,0.45);
+  --shadow:0 8px 24px rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-}
+html,body{height:100%}
 body{
   margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,Pretendard,Malgun Gothic,Arial,sans-serif;
+  font:400 var(--step-0)/1.6 system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Malgun Gothic,Arial,sans-serif;
   background:var(--bg);
-  color:var(--text);
-  line-height:1.6;
+  color:var(--fg);
   -webkit-font-smoothing:antialiased;
   text-rendering:optimizeLegibility;
 }
-a{color:var(--brand);text-decoration:none}
-a:hover{text-decoration:underline}
-.wrap{max-width:1120px;margin-inline:auto;padding-inline:var(--space-3)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1120px;margin:0 auto;padding:0 20px}
 header{
-  position:sticky;top:0;z-index:10;background:var(--bg);
+  position:sticky;top:0;z-index:10;
+  background:color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter:saturate(1.2) blur(8px);
   border-bottom:1px solid var(--line);
-  backdrop-filter:saturate(120%) blur(6px)
 }
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.5rem 0}
+.sitebar{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:12px 0;
+}
 .brand{
-  display:flex;align-items:center;gap:0.75rem;text-decoration:none;color:inherit
+  display:flex;align-items:center;gap:10px;font-weight:700;
+  letter-spacing:.2px;
 }
-.brand img{width:36px;height:36px;display:block;border-radius:50%}
-.brand strong{font-weight:700;font-size:var(--step-1);letter-spacing:0.01em}
-nav ul{display:flex;flex-wrap:wrap;gap:0.5rem 1rem;list-style:none;margin:0;padding:0}
+.brand-badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));
+  box-shadow:var(--shadow);
+}
+nav[aria-label="주요"] ul{
+  display:flex;flex-wrap:wrap;gap:10px 18px;list-style:none;padding:0;margin:0;
+}
 nav a{
-  display:inline-block;padding:0.375rem 0.25rem;border-radius:8px;color:inherit
+  display:inline-block;padding:8px 10px;border-radius:999px;
+  border:1px solid transparent;
 }
-nav a[aria-current="page"],nav a:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
-.tools{display:flex;align-items:center;gap:0.5rem}
-.btn-ghost{
-  border:1px solid var(--line);background:transparent;color:inherit;border-radius:999px;
-  padding:0.375rem 0.75rem;font-size:var(--step-0);line-height:1;cursor:pointer
+nav a:hover, nav a:focus-visible{
+  border-color:var(--line);background:color-mix(in oklab, var(--brand) 10%, transparent);
+  outline:3px solid transparent;
 }
-.btn-ghost:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
-.skip{
+.tools{display:flex;align-items:center;gap:8px}
+.btn{
+  appearance:none;border:1px solid var(--line);background:transparent;color:var(--fg);
+  padding:8px 12px;border-radius:999px;cursor:pointer;
+}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.theme-toggle{font-size:1rem}
+.skip-link{
   position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden
 }
-.skip:focus{position:fixed;left:1rem;top:1rem;width:auto;height:auto;z-index:1000;background:var(--bg);border:2px solid var(--brand);padding:0.5rem 0.75rem;border-radius:8px}
+.skip-link:focus{position:fixed;left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:var(--bg);border:2px solid var(--accent);z-index:9999}
 .hero{
-  padding:clamp(2rem,6vw,5rem) 0;
+  position:relative;isolation:isolate;
   background:
-    radial-gradient(1200px 400px at 80% -20%, color-mix(in oklab, var(--brand) 15%, transparent), transparent 60%),
-    radial-gradient(900px 300px at -20% 10%, color-mix(in oklab, var(--brand-2) 18%, transparent), transparent 60%)
+    radial-gradient(1200px 300px at 50% -10%, color-mix(in oklab,var(--brand) 20%, transparent), transparent),
+    radial-gradient(800px 240px at 90% 10%, color-mix(in oklab,var(--brand-2) 22%, transparent), transparent);
+  border-bottom:1px solid var(--line);
 }
-.hero .lead{color:var(--muted);max-width:60ch}
-.hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:color-mix(in oklab, var(--brand) 12%, transparent);color:var(--brand);
-  border:1px solid var(--line);padding:0.25rem 0.5rem;border-radius:999px;font-size:var(--step--1)}
-h1{font-size:clamp(var(--step-3),4vw,var(--step-5));line-height:1.15;margin:0.5rem 0 0.75rem}
-h2{font-size:clamp(var(--step-2),2.4vw,var(--step-3));line-height:1.2;margin:0 0 var(--space-2)}
-.section{padding:clamp(2rem,5vw,3rem) 0;border-top:1px solid var(--line)}
-.section header p{color:var(--muted);margin:0.25rem 0 0}
-.grid{display:grid;gap:var(--space-4)}
-.grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-.grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media (max-width:960px){
-  .grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero .inner{padding:48px 0;display:grid;gap:24px}
+.hero h1{
+  font-size:clamp(1.8rem,3.5vw,2.4rem);
+  line-height:1.25;margin:0 0 8px 0;
 }
-@media (max-width:560px){
-  .grid.cols-3,.grid.cols-2{grid-template-columns:1fr}
-  nav ul{gap:0.25rem 0.75rem}
+.lead{font-size:clamp(1rem,2.2vw,1.125rem);color:var(--muted);margin:0}
+.tag{
+  display:inline-block;margin-top:4px;padding:4px 10px;border-radius:999px;
+  border:1px dashed var(--line);font-size:var(--step--1);color:var(--muted)
 }
+.countdown{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px;
+}
+.timebox{
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:color-mix(in oklab,var(--bg) 85%, var(--brand) 5%);
+  padding:12px;text-align:center;box-shadow:var(--shadow);
+}
+.timebox strong{display:block;font-size:clamp(1.25rem,3vw,1.75rem)}
+.timebox span{display:block;font-size:var(--step--1);color:var(--muted)}
+.section{padding:48px 0;border-bottom:1px solid var(--line)}
+.section h2{font-size:var(--step-3);margin:0 0 16px 0}
+.grid{display:grid;gap:16px}
+.cards-3{grid-template-columns:repeat(3,1fr)}
+.cards-2{grid-template-columns:repeat(2,1fr)}
 .card{
-  border:1px solid var(--line);border-radius:var(--radius);padding:var(--space-4);background:color-mix(in oklab, var(--bg) 92%, white 8%);
+  border:1px solid var(--line);border-radius:var(--radius);padding:16px;background:var(--bg);
   box-shadow:var(--shadow)
 }
-.icon{width:40px;height:40px;border-radius:10px;display:inline-grid;place-items:center;background:color-mix(in oklab, var(--brand) 10%, transparent);border:1px solid var(--line)}
-.icon img{width:24px;height:24px;display:block}
-.timeline{position:relative;margin-left:0}
-.timeline::before{
-  content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),var(--brand-2))
+.card h3{margin:0 0 8px 0;font-size:var(--step-1)}
+.card p{margin:0;color:var(--muted)}
+.meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:var(--step--1)}
+.meta img{width:18px;height:18px}
+.step{
+  display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start
 }
-.step{position:relative;padding-left:2.5rem}
-.step::before{
-  content:"";position:absolute;left:4px;top:0.35rem;width:16px;height:16px;border-radius:50%;
-  background:var(--bg);border:3px solid var(--brand)
+.step .num{
+  width:36px;height:36px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#03270f;font-weight:800
 }
-.team-card{display:flex;gap:1rem;align-items:flex-start}
-.avatar{
-  flex:0 0 auto;width:56px;height:56px;border-radius:50%;overflow:hidden;border:1px solid var(--line);display:grid;place-items:center;background:linear-gradient(135deg,var(--brand) 0%,var(--brand-2) 100%)
+.benefit{
+  display:flex;align-items:flex-start;gap:12px
 }
-.avatar img{width:100%;height:100%;object-fit:cover}
-small, .meta{color:var(--muted);font-size:var(--step--1)}
-details{border:1px solid var(--line);border-radius:var(--radius);padding:0.5rem 0.75rem;background:color-mix(in oklab, var(--bg) 96%, white 4%)}
-summary{cursor:pointer;font-weight:600;list-style:none}
+.benefit .badge{
+  min-width:40px;min-height:40px;border-radius:10px;display:grid;place-items:center;
+  background:color-mix(in oklab,var(--brand) 25%, transparent)
+}
+.notice{
+  margin-top:12px;padding:12px;border-radius:var(--radius);
+  border:1px dashed var(--line);font-size:var(--step--1);color:var(--muted)
+}
+details{
+  border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;background:var(--bg)
+}
+details+details{margin-top:10px}
+summary{
+  cursor:pointer;list-style:none;font-weight:600
+}
 summary::-webkit-details-marker{display:none}
-details[open]{background:color-mix(in oklab, var(--bg) 92%, white 8%)}
-summary:focus-visible{outline:3px solid var(--brand);border-radius:8px}
-footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted)}
-.cta-note{font-size:var(--step--1);background:color-mix(in oklab, var(--accent) 12%, transparent);border:1px dashed color-mix(in oklab, var(--accent) 50%, var(--line) 50%);padding:0.75rem;border-radius:10px;color:color-mix(in oklab, var(--text) 85%, black 15%)}
-.section:target{scroll-margin-top:80px;animation:hilite .8s ease-out}
-@keyframes hilite{
-  from{box-shadow:0 0 0 0 rgba(31,111,235,0.0)}
-  25%{box-shadow:0 0 0 6px rgba(31,111,235,0.12)}
-  to{box-shadow:0 0 0 0 rgba(31,111,235,0)}
+footer{padding:32px 0;color:var(--muted);font-size:var(--step--1)}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.icon{width:24px;height:24px;flex:0 0 auto}
+.note-small{font-size:var(--step--1);color:var(--muted)}
+/* Responsive */
+@media (max-width:960px){
+  .cards-3{grid-template-columns:repeat(2,1fr)}
+  .sitebar{gap:10px}
 }
-@media (prefers-reduced-motion: reduce){
-  .section:target{animation:none}
+@media (max-width:560px){
+  .countdown{grid-template-columns:repeat(2,1fr)}
+  .cards-3,.cards-2{grid-template-columns:1fr}
+  nav[aria-label="주요"] ul{gap:8px 12px}
+  .brand span{display:none}
+}
+/* Motion */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important}
 }
 </style>
 </head>
 <body>
-<a href="#main" class="skip">본문으로 바로가기</a>
-<header role="banner" class="wrap">
-  <div class="topbar" aria-label="상단 바">
-    <a class="brand" href="#top" aria-label="홈으로 이동(문서 상단)">
-      <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64' role='img' aria-label='로고'><circle cx='32' cy='32' r='30' fill='white'/><circle cx='32' cy='32' r='28' fill='none' stroke='%231f6feb' stroke-width='4'/><path d='M10 34a22 22 0 0 0 44 0' fill='none' stroke='%230ea5e9' stroke-width='4' stroke-linecap='round'/><path d='M20 18c6 6 18 6 24 0' fill='none' stroke='%23f59e0b' stroke-width='4' stroke-linecap='round'/></svg>" alt="가나다라 로고(심볼)" decoding="async">
-      <strong>가나다라</strong>
-    </a>
-    <nav aria-label="내비게이션">
-      <ul>
-        <li><a href="#story" data-nav>스토리</a></li>
-        <li><a href="#values" data-nav>가치</a></li>
-        <li><a href="#timeline" data-nav>타임라인</a></li>
-        <li><a href="#team" data-nav>팀</a></li>
-        <li><a href="#faq" data-nav>FAQ</a></li>
+<a href="#main" class="skip-link">본문 바로가기</a>
+<header role="banner">
+  <div class="container sitebar">
+    <div class="brand" aria-label="리틀그린">
+      <span class="brand-badge" aria-hidden="true"></span>
+      <span>리틀그린</span>
+    </div>
+    <nav aria-label="주요">
+      <ul role="list">
+        <li><a href="#hero">행사 소개</a></li>
+        <li><a href="#highlights">안내</a></li>
+        <li><a href="#schedule">참여 방법</a></li>
+        <li><a href="#benefits">혜택</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
     <div class="tools">
-      <button id="themeToggle" class="btn-ghost" type="button" aria-label="다크 모드 전환" aria-pressed="false">🌓</button>
+      <button class="btn theme-toggle" type="button" aria-pressed="false" aria-label="다크 모드 전환">🌓</button>
     </div>
   </div>
 </header>
 
-<main id="main" class="wrap" role="main">
-  <section id="top" class="hero" aria-labelledby="hero-title">
-    <p class="hero-tag" aria-label="브랜드 산업 태그">카페 · 가나다라</p>
-    <h1 id="hero-title">예) 우리는 왜 이 길을 택했나</h1>
-    <p class="lead">예) 지역과 사람, 그리고 정직한 재료로 브랜드를 만듭니다.</p>
-  </section>
-
-  <section id="story" class="section" aria-labelledby="story-title">
-    <header>
-      <h2 id="story-title">브랜드 스토리</h2>
-      <p>2018년에 시작한 우리의 길, 그리고 변하지 않는 마음.</p>
-    </header>
-    <div class="card" role="note" aria-label="창립자 노트">
-      <p>작은 골목에서 시작했지만 우리의 신념은 변하지 않았습니다.</p>
-      <p class="meta">출발 연도: 2018</p>
+<main id="main">
+  <section id="hero" class="hero" aria-label="행사 소개">
+    <div class="container inner">
+      <p class="tag">식물 공방 · 리틀그린</p>
+      <h1>환경을 위한 작은 행동</h1>
+      <p class="lead">식목일 기념 프로모션 및 행사 안내 입니다</p>
+      <div class="meta" aria-live="polite" role="timer" aria-label="이벤트 마감까지 남은 시간">
+        <img loading="lazy" alt="" aria-hidden="true" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><polyline points='12 6 12 12 16 14'/></svg>">
+        <span>마감까지</span>
+      </div>
+      <div class="countdown" id="countdown" aria-hidden="false">
+        <div class="timebox" aria-label="남은 일수"><strong id="d">0</strong><span>일</span></div>
+        <div class="timebox" aria-label="남은 시간"><strong id="h">0</strong><span>시간</span></div>
+        <div class="timebox" aria-label="남은 분"><strong id="m">0</strong><span>분</span></div>
+        <div class="timebox" aria-label="남은 초"><strong id="s">0</strong><span>초</span></div>
+      </div>
     </div>
   </section>
 
-  <section id="values" class="section" aria-labelledby="values-title">
-    <header>
-      <h2 id="values-title">핵심 가치</h2>
-      <p>우리가 매일 확인하는 세 가지 기준.</p>
-    </header>
-    <div class="grid cols-3">
-      <article class="card" aria-labelledby="v1">
-        <div class="icon" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 3l7 4v5c0 5-4 7-7 9-3-2-7-4-7-9V7l7-4z' fill='%231f6feb'/><path d='M9.5 12.5l2 2 4-4' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-        </div>
-        <h3 id="v1">정직</h3>
-        <p class="meta">원료·과정을 투명하게 공개</p>
-      </article>
-      <article class="card" aria-labelledby="v2">
-        <div class="icon" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M12 22C12 22 5 17 5 11a7 7 0 0 1 14 0c0 6-7 11-7 11z' fill='%230ea5e9'/><path d='M9 12c0-1.657 1.79-5 3-5 1 0 2 1.5 2 3 0 2-1.5 3-5 2z' fill='%23ffffff' opacity='0.6'/></svg>">
-        </div>
-        <h3 id="v2">지속가능</h3>
-        <p class="meta">친환경 포장과 생산</p>
-      </article>
-      <article class="card" aria-labelledby="v3">
-        <div class="icon" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path d='M7 12c-2 0-3.5-1.5-3.5-3.5S5 5 7 5c1.7 0 3 1 3.5 2.5H13C13.5 6 14.8 5 16.5 5 18.5 5 20 6.5 20 8.5S18.5 12 16.5 12H7z' fill='%23f59e0b'/><path d='M4 13c.5 2 2.2 4 5 4h6c2.8 0 4.5-2 5-4' fill='none' stroke='%231f6feb' stroke-width='2' stroke-linecap='round'/></svg>">
-        </div>
-        <h3 id="v3">지역상생</h3>
-        <p class="meta">로컬 협업을 통한 성장</p>
-      </article>
+  <section id="highlights" class="section" aria-label="행사 안내">
+    <div class="container">
+      <h2>행사 안내</h2>
+      <div class="grid cards-3">
+        <article class="card">
+          <div class="benefit">
+            <div class="badge" aria-hidden="true">
+              <img loading="lazy" class="icon" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231feb60' d='M12 3c3.866 0 7 2.91 7 6.5S15.866 19 12 21c-3.866-2-7-6.134-7-11.5S8.134 3 12 3z'/></svg>">
+            </div>
+            <div>
+              <h3>목적</h3>
+              <p>티끌모아 태산이라는 말이 있듯이 많은 사람의 작은 노력이 모여 우리나라가 4계절을 되찾기를 바라는 마음으로 이벤트를 열었습니다.</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="benefit">
+            <div class="badge" aria-hidden="true">
+              <img loading="lazy" class="icon" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230ec5e9' d='M12 2a5 5 0 015 5v2h1a3 3 0 013 3v7a3 3 0 01-3 3H6a3 3 0 01-3-3v-7a3 3 0 013-3h1V7a5 5 0 015-5z'/></svg>">
+            </div>
+            <div>
+              <h3>대상</h3>
+              <p>화분 구매 후 인증을 해준 손님 전부</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="benefit">
+            <div class="badge" aria-hidden="true">
+              <img loading="lazy" class="icon" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g fill='%23f5eb0b'><rect x='3' y='4' width='18' height='16' rx='2'/><path fill='%23000000' fill-opacity='.2' d='M7 4h2v16H7zM15 4h2v16h-2z'/></g></svg>">
+            </div>
+            <div>
+              <h3>기간</h3>
+              <p>2025년 4월 1일 ~ 2025년 4월 31일</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="note-small" style="margin-top:10px">표시용 카운트다운은 행사 종료 예정일 기준으로 계산됩니다.</p>
     </div>
   </section>
 
-  <section id="timeline" class="section" aria-labelledby="timeline-title">
-    <header>
-      <h2 id="timeline-title">타임라인</h2>
-      <p>발자취로 보는 변화와 도전.</p>
-    </header>
-    <div class="timeline" aria-label="연혁">
-      <article class="step card" aria-labelledby="t2018">
-        <h3 id="t2018">2018 · 1호점 오픈</h3>
-        <p class="meta">브랜드의 첫 시작</p>
-      </article>
-      <article class="step card" aria-labelledby="t2023">
-        <h3 id="t2023">2023 · 지속가능 라인 론칭</h3>
-        <p class="meta">친환경 제품군 출시</p>
-      </article>
-      <article class="step card" aria-labelledby="t2025">
-        <h3 id="t2025">2025 · 리브랜딩</h3>
-        <p class="meta">새로운 로고와 슬로건 공개</p>
-      </article>
+  <section id="schedule" class="section" aria-label="참여 방법">
+    <div class="container">
+      <h2>참여 방법</h2>
+      <div class="grid cards-3">
+        <article class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">1</div>
+            <div>
+              <h3>구매하기</h3>
+              <p>매장에서 화분을 구매해주세요~</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">2</div>
+            <div>
+              <h3>무럭무럭 키우기</h3>
+              <p>구매한 화분을 무럭무럭 잘 키워주세요.</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="step">
+            <div class="num" aria-hidden="true">3</div>
+            <div>
+              <h3>인증하기</h3>
+              <p>분양 후 한 달이 지난 뒤 잘 자라고 있는 화분의 모습을 사진, 동영상, SNS 등 자유로운 형식으로 자랑해주세요.</p>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="team" class="section" aria-labelledby="team-title">
-    <header>
-      <h2 id="team-title">팀</h2>
-      <p>작은 팀, 깊은 집중.</p>
-    </header>
-    <div class="grid cols-3">
-      <article class="card team-card" aria-labelledby="m1">
-        <div class="avatar" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'><rect width='56' height='56' rx='28' fill='url(%23g)'/><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%231f6feb'/><stop offset='100%' stop-color='%230ea5e9'/></linearGradient></defs><text x='50%' y='56%' text-anchor='middle' font-family='Arial,Segoe UI,system-ui' font-size='24' fill='white'>홍</text></svg>">
-        </div>
-        <div>
-          <h3 id="m1">홍</h3>
-          <p class="meta">Founder · Creative Director</p>
-          <p class="meta">브랜드 철학 총괄</p>
-        </div>
-      </article>
-      <article class="card team-card" aria-labelledby="m2">
-        <div class="avatar" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'><rect width='56' height='56' rx='28' fill='url(%23g2)'/><defs><linearGradient id='g2' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%230ea5e9'/><stop offset='100%' stop-color='%231f6feb'/></linearGradient></defs><text x='50%' y='56%' text-anchor='middle' font-family='Arial,Segoe UI,system-ui' font-size='24' fill='white'>동</text></svg>">
-        </div>
-        <div>
-          <h3 id="m2">동</h3>
-          <p class="meta">Product Lead</p>
-          <p class="meta">원료·제조 협업 담당</p>
-        </div>
-      </article>
-      <article class="card team-card" aria-labelledby="m3">
-        <div class="avatar" aria-hidden="true">
-          <img loading="lazy" decoding="async" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'><rect width='56' height='56' rx='28' fill='url(%23g3)'/><defs><linearGradient id='g3' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='%23f59e0b'/><stop offset='100%' stop-color='%231f6feb'/></linearGradient></defs><text x='50%' y='56%' text-anchor='middle' font-family='Arial,Segoe UI,system-ui' font-size='24' fill='white'>최</text></svg>">
-        </div>
-        <div>
-          <h3 id="m3">최</h3>
-          <p class="meta">Brand Designer</p>
-          <p class="meta">시각 아이덴티티·패키지 디자인</p>
-        </div>
-      </article>
+  <section id="benefits" class="section" aria-label="혜택">
+    <div class="container">
+      <h2>혜택</h2>
+      <div class="grid cards-2">
+        <article class="card">
+          <div class="benefit">
+            <div class="badge" aria-hidden="true">
+              <img loading="lazy" class="icon" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231feb60' d='M20 7h-3.17a3 3 0 10-5.66 0H4a2 2 0 00-2 2v10a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zm-10.5-1a1.5 1.5 0 110 3 1.5 1.5 0 010-3z'/></svg>">
+            </div>
+            <div>
+              <h3>원하는 화분 하나 더!</h3>
+              <p>수량: 100 · 조건: 참여 고객 중 추첨</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="benefit">
+            <div class="badge" aria-hidden="true">
+              <img loading="lazy" class="icon" alt="" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%230ec5e9' d='M12 2l2.39 4.85L20 8.27l-4 3.89.94 5.51L12 15.9l-4.94 1.77L8 12.16 4 8.27l5.61-1.42L12 2z'/></svg>">
+            </div>
+            <div>
+              <h3>식물 영양제 세트</h3>
+              <p>수량: 10 · 조건: 참여 고객 중 추첨</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="notice" role="note" aria-label="유의 사항">
+        • 화분이 죽은 경우 이벤트에 응모할 수 없습니다.
+      </div>
     </div>
   </section>
 
-  <section id="faq" class="section" aria-labelledby="faq-title">
-    <header>
-      <h2 id="faq-title">자주 묻는 질문</h2>
-      <p>브랜드의 생각과 원칙에 대한 답변.</p>
-    </header>
-    <div class="grid cols-2" role="list">
-      <details role="listitem">
-        <summary>브랜드를 시작하게 된 계기는 무엇인가요?</summary>
-        <div class="meta">일상 속에서 지속가능한 가치를 실천하고 싶다는 마음으로 시작했습니다. 작은 아이디어에서 출발했지만, 지금은 많은 분들과 그 철학을 나누고 있습니다.</div>
+  <section id="faq" class="section" aria-label="자주 묻는 질문">
+    <div class="container">
+      <h2>FAQ</h2>
+      <details>
+        <summary>당첨 여부는 어떻게 알 수 있나요?</summary>
+        <div class="card" style="margin-top:10px"><p>개인적으로 연락해드릴 예정입니다.</p></div>
       </details>
-      <details role="listitem">
-        <summary>제품(서비스)에 담긴 브랜드 철학은 무엇인가요?</summary>
-        <div class="meta">‘정직한 재료, 진정성 있는 과정’이라는 원칙 아래 모든 제품을 만듭니다. 단순히 물건을 파는 것이 아니라, 우리의 가치가 담긴 경험을 전달하고자 합니다.</div>
+      <details>
+        <summary>화분은 보통 얼마인가요?</summary>
+        <div class="card" style="margin-top:10px">
+          <p>손바닥 크기의 작은 화분: 5000원</p>
+          <p>사람크기의 대형화분: 50000원</p>
+        </div>
       </details>
     </div>
-  </section>
-
-  <section class="section" aria-labelledby="notice-title">
-    <header>
-      <h2 id="notice-title">안내</h2>
-    </header>
-    <p class="cta-note" role="note">이 페이지는 정보 제공 전용입니다. 외부 이동, 전화연결, 예약·주문·결제, 파일 다운로드, 양식 제출 기능을 제공하지 않습니다.</p>
   </section>
 </main>
 
-<footer class="wrap" role="contentinfo" aria-label="푸터">
-  <div class="grid cols-2">
-    <div>
-      <strong>가나다라</strong>
-      <p class="meta">산업: 카페</p>
-      <p class="meta">주소: 서울시 강남구</p>
-      <p class="meta">연락처(표시 전용): 010-1111-1111</p>
+<footer role="contentinfo">
+  <div class="container">
+    <strong>리틀그린</strong> · 식물 공방
+    <div class="badges">
+      <span class="tag" aria-label="주소">서울시 강남구</span>
+      <span class="tag" aria-label="연락처">연락처: 010-1111-1111</span>
     </div>
-    <div>
-      <p class="meta">© <span id="year"></span> GaNaDaRa. All rights reserved.</p>
-      <p class="meta"><a href="#top">맨 위로</a> · <a href="#story">스토리</a> · <a href="#values">가치</a> · <a href="#timeline">타임라인</a> · <a href="#team">팀</a> · <a href="#faq">FAQ</a></p>
-    </div>
+    <p class="note-small" style="margin-top:8px">본 페이지는 안내 전용입니다. 외부 이동, 주문/결제, 예약, 제출 기능을 제공하지 않습니다.</p>
   </div>
 </footer>
 
 <script>
-/* Theme toggle & section observer (minimal) */
+/* Theme */
 (function(){
-  var root=document.documentElement;
-  var key="theme";
-  function apply(t){
-    if(t==="dark"||t==="light"){root.setAttribute("data-theme",t);}
-    else{root.setAttribute("data-theme",(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"));}
-    var pressed=(root.getAttribute("data-theme")==="dark");
-    var btn=document.getElementById("themeToggle");
-    if(btn){btn.setAttribute("aria-pressed",pressed);}
-  }
-  try{
-    var saved=localStorage.getItem(key);
-    apply(saved||"auto");
-  }catch(e){apply("auto");}
-  document.getElementById("themeToggle").addEventListener("click",function(){
-    var cur=root.getAttribute("data-theme");
-    var next=(cur==="dark")?"light":"dark";
-    root.setAttribute("data-theme",next);
-    try{localStorage.setItem(key,next);}catch(e){}
-    this.setAttribute("aria-pressed",next==="dark");
-  });
-
-  var links=[].slice.call(document.querySelectorAll("nav a[data-nav]"));
-  var map=new Map(links.map(function(a){return [a.getAttribute("href").slice(1),a]}));
-  if("IntersectionObserver" in window){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if(en.isIntersecting){
-          var id=en.target.id;
-          links.forEach(function(l){l.removeAttribute("aria-current");});
-          var active=map.get(id); if(active){active.setAttribute("aria-current","page");}
-        }
-      });
-    },{rootMargin:"-40% 0px -55% 0px",threshold:0});
-    ["story","values","timeline","team","faq"].forEach(function(id){
-      var el=document.getElementById(id); if(el) obs.observe(el);
+  const root=document.documentElement;
+  const key='theme';
+  const btn=document.querySelector('.theme-toggle');
+  const saved=localStorage.getItem(key);
+  if(saved==='dark'||saved==='light'){root.setAttribute('data-theme',saved);if(btn)btn.setAttribute('aria-pressed',saved==='dark');}
+  btn?.addEventListener('click',()=>{const cur=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',cur);localStorage.setItem(key,cur);btn.setAttribute('aria-pressed',cur==='dark');});
+})();
+/* Smooth in-page scroll (anchors only) */
+(function(){
+  const prefersReduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const id=a.getAttribute('href');
+      if(id && id.length>1){
+        const el=document.querySelector(id);
+        if(el){e.preventDefault();el.scrollIntoView({behavior: prefersReduced?'auto':'smooth', block:'start'});}
+      }
     });
+  });
+})();
+/* Countdown (display only) */
+(function(){
+  const d=document.getElementById('d'),h=document.getElementById('h'),m=document.getElementById('m'),s=document.getElementById('s');
+  // 행사 종료 예정일 (표시 전용). 입력 기간 표기가 4월 31일이므로 실제 계산은 4월 30일 23:59:59로 보정.
+  const target=new Date('2025-04-30T23:59:59+09:00').getTime();
+  function tick(){
+    const now=Date.now();
+    let diff=target-now;
+    if(diff<=0){d.textContent=h.textContent=m.textContent=s.textContent='0';return;}
+    const days=Math.floor(diff/86400000); diff-=days*86400000;
+    const hours=Math.floor(diff/3600000); diff-=hours*3600000;
+    const mins=Math.floor(diff/60000); diff-=mins*60000;
+    const secs=Math.floor(diff/1000);
+    d.textContent=String(days);
+    h.textContent=String(hours).padStart(2,'0');
+    m.textContent=String(mins).padStart(2,'0');
+    s.textContent=String(secs).padStart(2,'0');
   }
-
-  document.getElementById("year").textContent=new Date().getFullYear();
+  tick();
+  const timer=setInterval(()=>{tick(); if((new Date()).getTime()>target) clearInterval(timer);},1000);
 })();
 </script>
 </body>
